@@ -78,7 +78,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 
 /* Problem */
 .problem{background:var(--hell)}
+.prob-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;margin-top:48px;align-items:stretch}
+.prob-photo{border-radius:18px;overflow:hidden;min-height:360px;box-shadow:var(--shadow);background:#e4e6e9}
+.prob-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.prob-col{display:flex;flex-direction:column;gap:16px;justify-content:center}
 .prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.prob-col .prob-card{padding:24px 24px}
 .prob-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
 .prob-card .num{font-family:'Anton',sans-serif;font-size:2.4rem;color:var(--rot);line-height:1;opacity:.9}
 .prob-card h3{font-size:1.18rem;margin:14px 0 8px}
@@ -89,7 +94,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .coop-card{border-radius:18px;padding:44px 42px;position:relative;display:flex;flex-direction:column}
 .coop-card.tw{background:#1c1f22;color:#fff}
 .coop-card.pp{background:var(--rot);color:#fff}
-.coop-card .clogo{height:34px;width:auto;display:block;margin-bottom:10px;filter:brightness(0) invert(1)}
+.coop-card .clogo{width:auto;display:block;margin:0 0 14px 0}
+.coop-card .clogo.tw-logo{height:38px}
+.coop-card .clogo.pp-logo{height:52px;filter:brightness(0) invert(1)}
 .coop-card .role{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;opacity:.62;margin-bottom:12px}
 .coop-card h3{font-size:1.55rem;line-height:1.18;margin-bottom:24px;min-height:2.36em;display:flex;align-items:flex-end}
 .coop-card ul{list-style:none;display:flex;flex-direction:column;gap:0}
@@ -206,6 +213,14 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .faq-item[open] summary .plus svg{stroke:#fff}
 .faq-item .answer{padding:0 4px 26px;color:#5c6268;font-size:1.02rem;line-height:1.65;max-width:92%}
 
+/* Flotten-Band */
+.flotte-band{position:relative;min-height:400px;background-color:#1c1f22;background-image:linear-gradient(100deg,rgba(20,22,24,.82) 0%,rgba(20,22,24,.5) 55%,rgba(20,22,24,.25) 100%),url('assets/img/flotte.jpg');background-size:cover;background-position:center;display:flex;align-items:center}
+.flotte-band .wrap{width:100%}
+.flotte-band .fb-inner{max-width:560px;color:#fff}
+.flotte-band .eyebrow{color:#ff5566}
+.flotte-band h2{font-family:'Anton',sans-serif;font-size:clamp(1.7rem,3.6vw,2.7rem);text-transform:uppercase;line-height:1.12;color:#fff;margin-bottom:16px}
+.flotte-band p{font-size:1.08rem;color:#dfe2e5;line-height:1.6}
+
 /* CTA / Formular */
 .cta{background:var(--hell)}
 .cta-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;margin-top:20px}
@@ -239,6 +254,8 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
 @media(max-width:900px){
   section{padding:60px 0}
   .prob-grid,.paket-grid,.step-grid{grid-template-columns:1fr}
+  .prob-layout{grid-template-columns:1fr;gap:24px}
+  .prob-photo{min-height:260px}
   .auto-highlight{grid-template-columns:1fr;text-align:center;gap:20px;padding:34px 26px}
   .auto-highlight .hic{margin:0 auto}
   .auto-highlight p{margin:0 auto}
@@ -298,21 +315,26 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
       <h2 class="h2 display">Neues Fahrzeug, halbe Ausstattung</h2>
       <p class="sub">Das Fahrzeug ist eingerichtet – und dann fängt die Arbeit erst an. Werkzeug zusammensuchen, bestellen, nachrüsten. Der Monteur wartet.</p>
     </div>
-    <div class="prob-grid">
-      <div class="prob-card">
-        <div class="num">1</div>
-        <h3>Doppelter Aufwand</h3>
-        <p>Fahrzeug beim einen, Werkzeug beim anderen. Zwei Beschaffungen, zwei Ansprechpartner, zwei Termine.</p>
+    <div class="prob-layout">
+      <div class="prob-photo">
+        <img src="assets/img/problem-handwerker.jpg" alt="Handwerker am offenen Heck seines Transporters mit leerer Aluminium-Fahrzeugeinrichtung auf einem Werkstatthof im Allgäu">
       </div>
-      <div class="prob-card">
-        <div class="num">2</div>
-        <h3>Leere Regale</h3>
-        <p>Die ALUCA-Einrichtung sitzt – aber die Schubladen sind leer. Das Fahrzeug rollt, der Einsatz nicht.</p>
-      </div>
-      <div class="prob-card">
-        <div class="num">3</div>
-        <h3>Zeit, die kostet</h3>
-        <p>Jeder Tag zwischen Fahrzeugübergabe und Einsatzbereitschaft ist ein Tag, an dem das Fahrzeug nichts verdient.</p>
+      <div class="prob-col">
+        <div class="prob-card">
+          <div class="num">1</div>
+          <h3>Doppelter Aufwand</h3>
+          <p>Fahrzeug beim einen, Werkzeug beim anderen. Zwei Beschaffungen, zwei Ansprechpartner, zwei Termine.</p>
+        </div>
+        <div class="prob-card">
+          <div class="num">2</div>
+          <h3>Leere Regale</h3>
+          <p>Die ALUCA-Einrichtung sitzt – aber die Schubladen sind leer. Das Fahrzeug rollt, der Einsatz nicht.</p>
+        </div>
+        <div class="prob-card">
+          <div class="num">3</div>
+          <h3>Zeit, die kostet</h3>
+          <p>Jeder Tag zwischen Fahrzeugübergabe und Einsatzbereitschaft ist ein Tag, an dem das Fahrzeug nichts verdient.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -328,7 +350,7 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
     </div>
     <div class="coop-grid">
       <div class="coop-card tw">
-        <img class="clogo" src="assets/logo-trautwein.png" alt="Trautwein Fahrzeugbau">
+        <img class="clogo tw-logo" src="assets/logo-trautwein.png" alt="Trautwein Fahrzeugbau">
         <div class="role">Der Ausbau</div>
         <h3>Die Fahrzeugeinrichtung</h3>
         <ul>
@@ -340,7 +362,7 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
       </div>
       <div class="coop-plus"><span>+</span></div>
       <div class="coop-card pp">
-        <img class="clogo" src="assets/logo-poeppel.svg" alt="R. Pöppel GmbH & Co. KG">
+        <img class="clogo pp-logo" src="assets/logo-poeppel.svg" alt="R. Pöppel GmbH & Co. KG">
         <div class="role">Die Ausstattung</div>
         <h3>Die Werkzeug-Grundausstattung</h3>
         <ul>
@@ -566,6 +588,17 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
         <p>Auf Wunsch koppeln wir die Bestände direkt an das Pöppel-Bestellsystem: leert sich ein Wagen, wird automatisiert nachbestellt. Ein Shop, ein System – und Ihre Flotte bleibt ohne Nachdenken bestückt.</p>
       </div>
       <span class="tag">Pöppel Bestellsystem</span>
+    </div>
+  </div>
+</section>
+
+<!-- FLOTTEN-BAND -->
+<section class="flotte-band">
+  <div class="wrap">
+    <div class="fb-inner">
+      <p class="eyebrow">Ein Fahrzeug oder die ganze Flotte</p>
+      <h2>Von einem Servicewagen<br>bis zum kompletten Fuhrpark</h2>
+      <p>Ob Sie ein einzelnes Fahrzeug ausstatten oder Ihre gesamte Flotte auf einen Standard bringen – Trautwein und Pöppel skalieren mit. Gleiche Einrichtung, gleiche Bestückung, jederzeit nachvollziehbar.</p>
     </div>
   </div>
 </section>
