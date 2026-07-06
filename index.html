@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fahrzeug einrichten & Werkzeug bestücken | Pöppel × Trautwein Fahrzeugbau</title>
+<meta name="description" content="Neues Servicefahrzeug fahr- und arbeitsfertig übergeben: Trautwein baut die ALUCA-Fahrzeugeinrichtung, Pöppel liefert die Werkzeug-Grundausstattung. Ein Ansprechpartner im Allgäu – aus Memmingen und Benningen.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.poeppel-wkz.de/fahrzeugeinrichtung-werkzeug-kooperation-trautwein">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fahrzeug einrichten & Werkzeug bestücken – Pöppel × Trautwein">
+<meta property="og:description" content="Trautwein richtet das Fahrzeug ein, Pöppel bestückt es mit Werkzeug. Ihr neues Fahrzeug kommt fahr- und arbeitsfertig.">
+<meta property="og:locale" content="de_DE">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --rot:#CC071E;
+  --rot-dark:#a80518;
+  --dunkel:#32373c;
+  --hell:#F6F6F6;
+  --weiss:#FFFFFF;
+  --gruen:#8ebf22;
+  --line:#e3e5e8;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(50,55,60,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color:var(--dunkel);
+  background:var(--weiss);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{line-height:1.12;letter-spacing:-.01em}
+.display{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:84px 0}
+a{color:inherit}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav .logo img{height:34px;display:block}
+.nav .cop{font-size:.82rem;color:#6b7178;font-weight:600;border-left:2px solid var(--line);padding-left:14px;margin-left:14px}
+.nav-cta{background:var(--rot);color:#fff;padding:11px 20px;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--rot-dark)}
+.brandline{display:flex;align-items:center;gap:12px}
+
+/* Hero */
+.hero{background:linear-gradient(105deg,rgba(28,31,34,.94) 0%,rgba(32,36,40,.82) 48%,rgba(28,31,34,.45) 100%),url('assets/img/hero-transporter-ausbau.jpg');background-size:cover;background-position:center right;color:#fff;padding:104px 0 100px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(204,7,30,.3),transparent 68%);pointer-events:none}
+.hero .kicker{display:inline-block;background:var(--rot);color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:6px;margin-bottom:26px}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4rem);color:#fff;margin-bottom:22px}
+.hero h1 .rot{color:#ff2f45}
+.hero p.lead{font-size:clamp(1.06rem,2vw,1.28rem);max-width:640px;color:#d4d7da}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.btn{display:inline-block;padding:15px 30px;border-radius:9px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .15s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--rot);color:#fff}
+.btn-primary:hover{background:var(--rot-dark)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{border-color:#fff}
+.hero .partners{margin-top:52px;display:flex;align-items:center;gap:18px;font-size:.86rem;color:#9aa0a6;flex-wrap:wrap}
+.hero .partners b{color:#fff}
+
+/* Section headings */
+.eyebrow{color:var(--rot);font-weight:700;font-size:.82rem;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px}
+.h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin-bottom:18px}
+.sub{font-size:1.1rem;color:#5c6268;max-width:680px}
+.center{text-align:center}
+.center .sub{margin-left:auto;margin-right:auto}
+
+/* Problem */
+.problem{background:var(--hell)}
+.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.prob-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+.prob-card .num{font-family:'Anton',sans-serif;font-size:2.4rem;color:var(--rot);line-height:1;opacity:.9}
+.prob-card h3{font-size:1.18rem;margin:14px 0 8px}
+.prob-card p{color:#5c6268;font-size:.98rem}
+
+/* Kooperation split */
+.coop-grid{display:grid;grid-template-columns:1fr 88px 1fr;gap:0;margin-top:52px;align-items:stretch}
+.coop-card{border-radius:var(--radius);padding:38px 34px;position:relative}
+.coop-card.tw{background:#1c1f22;color:#fff}
+.coop-card.pp{background:var(--rot);color:#fff}
+.coop-card .role{font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;opacity:.8;margin-bottom:8px}
+.coop-card h3{font-size:1.5rem;margin-bottom:16px}
+.coop-card ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.coop-card li{padding-left:26px;position:relative;font-size:.98rem;color:rgba(255,255,255,.92)}
+.coop-card li::before{content:"";position:absolute;left:0;top:9px;width:11px;height:11px;border-radius:3px;background:rgba(255,255,255,.85)}
+.coop-plus{display:flex;align-items:center;justify-content:center}
+.coop-plus span{font-family:'Anton',sans-serif;font-size:2.6rem;color:var(--dunkel);background:#fff;border:2px solid var(--line);width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+.coop-result{margin-top:30px;background:var(--dunkel);color:#fff;border-radius:var(--radius);padding:26px 32px;text-align:center;font-size:1.22rem;font-weight:600}
+.coop-result b{color:#ff5566}
+
+/* Galerie Ausbauten */
+.galerie{background:#fff}
+.gal-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:200px;gap:16px;margin-top:48px}
+.gal-item{position:relative;overflow:hidden;border-radius:var(--radius);background:var(--dunkel)}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.gal-item:hover img{transform:scale(1.05)}
+.gal-item .cap{position:absolute;left:0;bottom:0;right:0;padding:16px 18px 14px;background:linear-gradient(transparent,rgba(20,22,24,.85));color:#fff;font-size:.9rem;font-weight:600}
+.gal-big{grid-column:span 4;grid-row:span 2}
+.gal-tall{grid-column:span 2;grid-row:span 2}
+.gal-wide{grid-column:span 3}
+.gal-sm{grid-column:span 3}
+.gal-note{margin-top:20px;font-size:.84rem;color:#8a9096;text-align:center;font-style:italic}
+
+/* Pakete */
+.pakete{background:var(--hell)}
+.paket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.paket{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px;display:flex;flex-direction:column}
+.paket.mid{border:2px solid var(--rot);box-shadow:var(--shadow);position:relative}
+.paket.mid .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--rot);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:20px}
+.paket h3{font-family:'Anton',sans-serif;font-size:1.7rem;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
+.paket .who{color:var(--rot);font-weight:700;font-size:.9rem;margin-bottom:18px}
+.paket ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;flex:1}
+.paket li{padding-left:24px;position:relative;font-size:.96rem;color:#4a5056}
+.paket li::before{content:"✓";position:absolute;left:0;color:var(--rot);font-weight:800}
+.paket .foot{font-size:.84rem;color:#8a9096;border-top:1px solid var(--line);padding-top:16px}
+.placeholder-note{margin-top:30px;font-size:.86rem;color:#8a9096;text-align:center;font-style:italic}
+
+/* Vorteile Trautwein */
+.vorteile-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:48px}
+.vorteil{text-align:center;padding:22px 14px}
+.vorteil .ic{width:52px;height:52px;margin:0 auto 14px;border-radius:12px;background:var(--rot);display:flex;align-items:center;justify-content:center}
+.vorteil .ic svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vorteil h4{font-size:1rem;margin-bottom:6px}
+.vorteil p{font-size:.86rem;color:#5c6268}
+
+/* Ablauf */
+.ablauf{background:var(--dunkel);color:#fff}
+.ablauf .h2{color:#fff}
+.ablauf .sub{color:#b8bcc0}
+.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.step{position:relative;padding:32px 26px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius)}
+.step .n{font-family:'Anton',sans-serif;font-size:1.1rem;width:44px;height:44px;background:var(--rot);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.step h3{font-size:1.2rem;margin-bottom:10px}
+.step p{color:#b8bcc0;font-size:.96rem}
+
+/* CTA / Formular */
+.cta{background:var(--hell)}
+.cta-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;margin-top:20px}
+.cta-left .h2{margin-bottom:20px}
+.contact-line{display:flex;align-items:center;gap:14px;margin-top:18px;font-size:1.05rem}
+.contact-line .ic{width:42px;height:42px;border-radius:10px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-line .ic svg{width:20px;height:20px;stroke:var(--rot);fill:none;stroke-width:2}
+.contact-line b{display:block;font-size:.78rem;color:#8a9096;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:36px;box-shadow:var(--shadow)}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:.85rem;font-weight:600;margin-bottom:7px}
+.fg input,.fg select,.fg textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:.96rem;color:var(--dunkel);background:#fdfdfd;transition:border-color .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--rot)}
+.fg textarea{resize:vertical;min-height:88px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form button{width:100%;background:var(--rot);color:#fff;border:none;padding:15px;border-radius:9px;font-family:inherit;font-weight:700;font-size:1.02rem;cursor:pointer;transition:background .2s}
+form button:hover{background:var(--rot-dark)}
+.form-note{font-size:.78rem;color:#8a9096;margin-top:14px;text-align:center}
+.form-ok{display:none;background:#f0f8e5;border:1px solid var(--gruen);color:#4a6b12;padding:16px;border-radius:9px;font-size:.94rem;margin-top:16px}
+
+/* Footer */
+footer{background:#1c1f22;color:#9aa0a6;padding:56px 0 30px;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:36px}
+footer h4{color:#fff;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px}
+footer a{color:#9aa0a6;text-decoration:none;display:block;margin-bottom:8px;transition:color .2s}
+footer a:hover{color:#fff}
+footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem;color:#6b7178}
+.disclaimer{background:#16181a;color:#6b7178;font-size:.74rem;padding:16px 0;line-height:1.5}
+
+@media(max-width:900px){
+  section{padding:60px 0}
+  .prob-grid,.paket-grid,.step-grid{grid-template-columns:1fr}
+  .coop-grid{grid-template-columns:1fr;gap:16px}
+  .coop-plus{padding:6px 0}
+  .coop-plus span{width:52px;height:52px;font-size:2rem}
+  .vorteile-grid{grid-template-columns:repeat(2,1fr)}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .gal-big,.gal-tall,.gal-wide,.gal-sm{grid-column:span 2;grid-row:span 1}
+  .gal-big{grid-row:span 2}
+  .gal-item[style]{grid-column:span 2 !important}
+  .cta-grid{grid-template-columns:1fr;gap:34px}
+  .foot-grid{grid-template-columns:1fr}
+  .nav .cop{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brandline">
+      <span class="logo"><img src="assets/logo-poeppel.svg" alt="R. Pöppel GmbH & Co. KG"></span>
+      <span class="cop">Kooperation mit<br>Trautwein Fahrzeugbau</span>
+    </div>
+    <a href="#kontakt" class="nav-cta">Beratung anfragen</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker">Pöppel × Trautwein Fahrzeugbau</span>
+    <h1 class="display">Das Fahrzeug steht.<br><span class="rot">Das Werkzeug fehlt.</span></h1>
+    <p class="lead">Trautwein baut die Fahrzeugeinrichtung. Pöppel liefert die Werkzeug-Grundausstattung gleich mit. Ihr neues Service­fahrzeug kommt fahr- <b>und</b> arbeitsfertig – aus einer Hand, aus dem Allgäu.</p>
+    <div class="btns">
+      <a href="#kontakt" class="btn btn-primary">Grundausstattung anfragen</a>
+      <a href="#kooperation" class="btn btn-ghost">So funktioniert die Kooperation</a>
+    </div>
+    <div class="partners">
+      <span><b>Trautwein Fahrzeugbau</b> · ALUCA-Fahrzeugeinrichtung, Benningen</span>
+      <span>·</span>
+      <span><b>Pöppel</b> · 300.000 Artikel ab Lager, Memmingen</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Das Problem</p>
+      <h2 class="h2 display">Neues Fahrzeug, halbe Ausstattung</h2>
+      <p class="sub">Das Fahrzeug ist eingerichtet – und dann fängt die Arbeit erst an. Werkzeug zusammensuchen, bestellen, nachrüsten. Der Monteur wartet.</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob-card">
+        <div class="num">1</div>
+        <h3>Doppelter Aufwand</h3>
+        <p>Fahrzeug beim einen, Werkzeug beim anderen. Zwei Beschaffungen, zwei Ansprechpartner, zwei Termine.</p>
+      </div>
+      <div class="prob-card">
+        <div class="num">2</div>
+        <h3>Leere Regale</h3>
+        <p>Die ALUCA-Einrichtung sitzt – aber die Schubladen sind leer. Das Fahrzeug rollt, der Einsatz nicht.</p>
+      </div>
+      <div class="prob-card">
+        <div class="num">3</div>
+        <h3>Zeit, die kostet</h3>
+        <p>Jeder Tag zwischen Fahrzeugübergabe und Einsatzbereitschaft ist ein Tag, an dem das Fahrzeug nichts verdient.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KOOPERATION -->
+<section id="kooperation">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Die Kooperation</p>
+      <h2 class="h2 display">Zwei Spezialisten, ein Fahrzeug</h2>
+      <p class="sub">Trautwein und Pöppel greifen ineinander: Der eine richtet ein, der andere bestückt. Sie bekommen ein Fahrzeug, das ab der Übergabe arbeitet.</p>
+    </div>
+    <div class="coop-grid">
+      <div class="coop-card tw">
+        <div class="role">Trautwein Fahrzeugbau</div>
+        <h3>Die Fahrzeugeinrichtung</h3>
+        <ul>
+          <li>ALUCA-Systeme aus Aluminium – mobil, leicht, effizient</li>
+          <li>Von der Planung bis zum Einbau, alles aus einer Werkstatt</li>
+          <li>Sonderanfertigung nach Zeichnung, Skizze oder Muster</li>
+          <li>Fahrzeugbau aus dem Allgäu, Benningen bei Memmingen</li>
+        </ul>
+      </div>
+      <div class="coop-plus"><span>+</span></div>
+      <div class="coop-card pp">
+        <div class="role">R. Pöppel</div>
+        <h3>Die Werkzeug-Grundausstattung</h3>
+        <ul>
+          <li>300.000 Artikel, 98 % Lieferbereitschaft ab Lager</li>
+          <li>Abgestimmte Grundpakete je Gewerk – Basis bis Voll</li>
+          <li>Fachberatung statt Katalog: der Monteur bekommt, was er braucht</li>
+          <li>Werkzeugpartner aus der Region seit 1925</li>
+        </ul>
+      </div>
+    </div>
+    <div class="coop-result">Ein Ansprechpartner. Ein Prozess. Ein Fahrzeug, das <b>fahr- und arbeitsfertig</b> übergeben wird.</div>
+  </div>
+</section>
+
+<!-- GALERIE AUSBAUTEN -->
+<section class="galerie" id="ausbauten">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Beispiele</p>
+      <h2 class="h2 display">So sehen die Ausbauten aus</h2>
+      <p class="sub">ALUCA-Aluminiumsysteme von Trautwein – Regale, Schubladen, Werkbank und Fahrzeugboden. Genau hier kommt die Werkzeug-Grundausstattung von Pöppel hinein.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item gal-big">
+        <img src="assets/img/einrichtung-werkbank.jpg" alt="ALUCA-Fahrzeugeinrichtung mit Regalsystem, Schubladen und Werkbank mit Schraubstock im Kastenwagen">
+        <span class="cap">Komplette Einrichtung mit Werkbank und Schraubstock</span>
+      </div>
+      <div class="gal-item gal-tall">
+        <img src="assets/img/ausbau-aluca-schubladen.jpg" alt="ALUCA-Regalsystem mit ausgezogenen Werkzeugschubladen im Transporter">
+        <span class="cap">ALUCA-Schubladenschrank</span>
+      </div>
+      <div class="gal-item gal-wide">
+        <img src="assets/img/detail-schubladen.jpg" alt="Detail: Werkzeugschubladen mit Sortiereinsätzen einer Trautwein-Fahrzeugeinrichtung">
+        <span class="cap">Schubladen mit Sortiereinsätzen</span>
+      </div>
+      <div class="gal-item gal-sm">
+        <img src="assets/img/detail-werkbank-schraubstock.jpg" alt="Detail: ausklappbare Werkbank mit Schraubstock in der Fahrzeugeinrichtung">
+        <span class="cap">Ausklappbare Werkbank</span>
+      </div>
+      <div class="gal-item" style="grid-column:span 6">
+        <img src="assets/img/ausbau-fahrzeugboden.jpg" alt="Fahrzeugboden mit Airline-Zurrschienen im Laderaum eines Transporters von Trautwein">
+        <span class="cap">Fahrzeugboden mit Airline-Zurrschienen</span>
+      </div>
+    </div>
+    <p class="gal-note">Referenzfotos: Trautwein Fahrzeugbau GmbH – Nutzung im Rahmen der Kooperation (Freigabe vor Livegang bestätigen).</p>
+  </div>
+</section>
+
+<!-- PAKETE -->
+<section class="pakete" id="pakete">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Was Pöppel liefert</p>
+      <h2 class="h2 display">Werkzeug-Grundpakete je Gewerk</h2>
+      <p class="sub">Abgestimmt auf die ALUCA-Einrichtung im Fahrzeug. Drei Ausbaustufen – vom Grundstock bis zur kompletten Vollausstattung.</p>
+    </div>
+    <div class="paket-grid">
+      <div class="paket">
+        <h3>Basis</h3>
+        <div class="who">Grundstock für den Einsatz</div>
+        <ul>
+          <li>Handwerkzeug-Grundsortiment</li>
+          <li>Messen, Markieren, Befestigen</li>
+          <li>Verbrauchsmaterial-Startset</li>
+          <li>Passgenau für die Schubladen</li>
+        </ul>
+        <div class="foot">Für Fahrzeuge, die einen verlässlichen Grundstock brauchen.</div>
+      </div>
+      <div class="paket mid">
+        <span class="badge">Empfohlen</span>
+        <h3>Komfort</h3>
+        <div class="who">Der einsatzfertige Standard</div>
+        <ul>
+          <li>Alles aus Basis</li>
+          <li>Akku-Maschinen abgestimmt aufs Gewerk</li>
+          <li>Mess- und Prüftechnik</li>
+          <li>Ordnungssystem für die Einrichtung</li>
+        </ul>
+        <div class="foot">Die häufigste Wahl – das Fahrzeug arbeitet ab Tag eins.</div>
+      </div>
+      <div class="paket">
+        <h3>Voll</h3>
+        <div class="who">Komplett arbeitsfertig</div>
+        <ul>
+          <li>Alles aus Komfort</li>
+          <li>Spezialwerkzeug nach Gewerk</li>
+          <li>Ladungssicherung & Sicherheit</li>
+          <li>Nachfüll-Konzept ab Lager</li>
+        </ul>
+        <div class="foot">Für Flotten, die ohne Nacharbeit übergeben werden sollen.</div>
+      </div>
+    </div>
+    <p class="placeholder-note">Paketinhalte als Rahmen – die konkrete Bestückung wird je Gewerk und Fahrzeug im Beratungsgespräch festgelegt.</p>
+  </div>
+</section>
+
+<!-- VORTEILE TRAUTWEIN -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Warum Trautwein</p>
+      <h2 class="h2 display">Fahrzeugbau, der liefert</h2>
+      <p class="sub">Die Fahrzeugeinrichtung kommt von einem Spezialbetrieb, der seit Jahren Aufbauten, Sonderfahrzeuge und Einrichtungen baut.</p>
+    </div>
+    <div class="vorteile-grid">
+      <div class="vorteil">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h4>Verlässlich</h4>
+        <p>Hält, was zugesagt wird.</p>
+      </div>
+      <div class="vorteil">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21l2.3-7.1-6-4.5h7.6z"/></svg></div>
+        <h4>Höchste Qualität</h4>
+        <p>Beste Materialien, Detailarbeit.</p>
+      </div>
+      <div class="vorteil">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h4>Termintreue</h4>
+        <p>Pünktlich und zuverlässig.</p>
+      </div>
+      <div class="vorteil">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21v-4l11-11 4 4L7 21z"/><path d="M14 6l4 4"/></svg></div>
+        <h4>Flexibel</h4>
+        <p>Sonderanfertigung nach Muster.</p>
+      </div>
+      <div class="vorteil">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h4>Direkter Kontakt</h4>
+        <p>Persönlich, nah dran.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABLAUF -->
+<section class="ablauf">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow" style="color:#ff5566">In drei Schritten</p>
+      <h2 class="h2 display">So läuft die Ausstattung</h2>
+      <p class="sub">Ein durchgehender Prozess statt zwei getrennter Beschaffungen.</p>
+    </div>
+    <div class="step-grid">
+      <div class="step">
+        <div class="n display">01</div>
+        <h3>Fahrzeug einrichten</h3>
+        <p>Trautwein plant und baut die ALUCA-Fahrzeugeinrichtung – abgestimmt auf Fahrzeug und Gewerk.</p>
+      </div>
+      <div class="step">
+        <div class="n display">02</div>
+        <h3>Grundpaket wählen</h3>
+        <p>Pöppel stimmt das Werkzeug-Grundpaket auf die Einrichtung ab – Basis, Komfort oder Voll.</p>
+      </div>
+      <div class="step">
+        <div class="n display">03</div>
+        <h3>Einsatzbereit übergeben</h3>
+        <p>Fahrzeug plus bestückte Einrichtung. Der Monteur steigt ein und fängt an.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT / FORMULAR -->
+<section class="cta" id="kontakt">
+  <div class="wrap">
+    <div class="cta-grid">
+      <div class="cta-left">
+        <p class="eyebrow">Jetzt anfragen</p>
+        <h2 class="h2 display">Fahrzeug fertig?<br>Werkzeug dazu.</h2>
+        <p class="sub">Sagen Sie uns, welches Fahrzeug Sie ausstatten – wir melden uns mit einem passenden Grundpaket. Persönlich, aus der Region.</p>
+        <div class="contact-line">
+          <span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span><b>Telefon Pöppel</b>Beratung Werkzeug-Grundausstattung</span>
+        </div>
+        <div class="contact-line">
+          <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></span>
+          <span><b>E-Mail</b>marketing@poeppel-wkz.de</span>
+        </div>
+      </div>
+      <form id="leadForm" novalidate>
+        <div class="row2">
+          <div class="fg">
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="fg">
+            <label for="firma">Firma*</label>
+            <input type="text" id="firma" name="firma" required>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="fg">
+            <label for="email">E-Mail*</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="fg">
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon">
+          </div>
+        </div>
+        <div class="fg">
+          <label for="fahrzeug">Fahrzeug / Gewerk</label>
+          <input type="text" id="fahrzeug" name="fahrzeug" placeholder="z. B. Kastenwagen, Elektro-Handwerk">
+        </div>
+        <div class="fg">
+          <label for="paket">Interesse</label>
+          <select id="paket" name="paket">
+            <option value="">Bitte wählen</option>
+            <option>Grundpaket Basis</option>
+            <option>Grundpaket Komfort</option>
+            <option>Grundpaket Voll</option>
+            <option>Erst beraten lassen</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="nachricht">Nachricht</label>
+          <textarea id="nachricht" name="nachricht" placeholder="Wann soll das Fahrzeug einsatzbereit sein?"></textarea>
+        </div>
+        <button type="submit">Grundausstattung anfragen</button>
+        <p class="form-note">Wir melden uns innerhalb eines Werktags. Ihre Daten nutzen wir ausschließlich zur Bearbeitung Ihrer Anfrage.</p>
+        <div class="form-ok" id="formOk">Danke für Ihre Anfrage. Pöppel meldet sich innerhalb eines Werktags bei Ihnen.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo-f"><img src="assets/logo-poeppel.svg" alt="R. Pöppel GmbH & Co. KG"></div>
+        <p>Werkzeug, Technik und Beratung für Handwerk und Industrie in der Region – seit 1925 aus Memmingen. Kooperationspartner für die Werkzeug-Grundausstattung im Fahrzeug.</p>
+      </div>
+      <div>
+        <h4>R. Pöppel GmbH & Co. KG</h4>
+        <a href="https://www.poeppel-wkz.de">www.poeppel-wkz.de</a>
+        <a href="mailto:marketing@poeppel-wkz.de">marketing@poeppel-wkz.de</a>
+        <span>Alpenstraße 45, Memmingen</span>
+      </div>
+      <div>
+        <h4>Trautwein Fahrzeugbau GmbH</h4>
+        <a href="https://www.trautwein.org">www.trautwein.org</a>
+        <a href="mailto:info@trautwein.org">info@trautwein.org</a>
+        <span>Industriestraße 7, 87734 Benningen</span>
+        <span>T: +49 (0) 8331 / 9225-0</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 R. Pöppel GmbH & Co. KG · Kooperation mit Trautwein Fahrzeugbau GmbH</span>
+      <span>Impressum · Datenschutz</span>
+    </div>
+  </div>
+</footer>
+<div class="disclaimer">
+  <div class="wrap">
+    Alle Angebote freibleibend und nicht mit anderen Aktionen kombinierbar. Solange der Vorrat reicht. Irrtum und Zwischenverkauf vorbehalten.
+  </div>
+</div>
+
+<!-- JSON-LD: Organisation + Kooperation (GEO) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://www.poeppel-wkz.de/#organization",
+      "name":"R. Pöppel GmbH & Co. KG",
+      "url":"https://www.poeppel-wkz.de",
+      "email":"marketing@poeppel-wkz.de",
+      "foundingDate":"1925",
+      "address":{"@type":"PostalAddress","streetAddress":"Alpenstraße 45","addressLocality":"Memmingen","postalCode":"87700","addressCountry":"DE"},
+      "areaServed":"Allgäu / Memmingen / Unterallgäu",
+      "description":"Werkzeug, Technik und Beratung für Handwerk und Industrie. Liefert die Werkzeug-Grundausstattung für Fahrzeugeinrichtungen in Kooperation mit Trautwein Fahrzeugbau."
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://www.trautwein.org/#organization",
+      "name":"Trautwein Fahrzeugbau GmbH",
+      "url":"https://www.trautwein.org",
+      "email":"info@trautwein.org",
+      "telephone":"+49-8331-9225-0",
+      "address":{"@type":"PostalAddress","streetAddress":"Industriestraße 7","addressLocality":"Benningen","postalCode":"87734","addressCountry":"DE"},
+      "description":"Spezial-Fahrzeugbau im Allgäu: Fahrzeugeinrichtungen aus Aluminium (ALUCA), Aufbauten, Anhänger und Sonderfahrzeuge."
+    },
+    {
+      "@type":"Service",
+      "name":"Fahrzeugeinrichtung mit Werkzeug-Grundausstattung",
+      "provider":{"@id":"https://www.poeppel-wkz.de/#organization"},
+      "areaServed":"Allgäu / Memmingen",
+      "description":"Kooperationsleistung: Trautwein baut die Aluminium-Fahrzeugeinrichtung, Pöppel liefert die abgestimmte Werkzeug-Grundausstattung. Ergebnis ist ein fahr- und arbeitsfertiges Servicefahrzeug.",
+      "serviceType":"Fahrzeugeinrichtung, Werkzeug-Grundausstattung"
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Was leistet die Kooperation von Pöppel und Trautwein?","acceptedAnswer":{"@type":"Answer","text":"Trautwein Fahrzeugbau baut die Fahrzeugeinrichtung (ALUCA-Aluminiumsysteme), Pöppel liefert die passende Werkzeug-Grundausstattung. So wird das Fahrzeug fahr- und arbeitsfertig aus einer Hand übergeben."}},
+        {"@type":"Question","name":"Für welche Fahrzeuge eignet sich das Angebot?","acceptedAnswer":{"@type":"Answer","text":"Für Servicefahrzeuge und Flotten von Handwerks- und Industriebetrieben, die eine Fahrzeugeinrichtung erhalten und direkt mit Werkzeug bestückt werden sollen."}},
+        {"@type":"Question","name":"Wo sind Pöppel und Trautwein ansässig?","acceptedAnswer":{"@type":"Answer","text":"Pöppel sitzt in Memmingen, Trautwein Fahrzeugbau in Benningen (87734) im Allgäu. Beide Partner sind regional erreichbar."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var req=['name','firma','email'];
+  var ok=true;
+  req.forEach(function(id){
+    var el=document.getElementById(id);
+    if(!el.value.trim()){el.style.borderColor='#CC071E';ok=false;}else{el.style.borderColor='';}
+  });
+  if(!ok)return;
+  this.querySelector('button').style.display='none';
+  this.querySelector('.form-note').style.display='none';
+  document.getElementById('formOk').style.display='block';
+});
+</script>
+
+</body>
+</html>
