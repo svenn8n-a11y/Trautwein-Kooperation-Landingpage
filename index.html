@@ -517,9 +517,9 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
 <section class="automatik" id="management">
   <div class="wrap">
     <div class="center">
-      <p class="eyebrow">Nach der Übergabe</p>
-      <h2 class="h2 display">So läuft es automatisch</h2>
-      <p class="sub">Mit der Übergabe fängt die Partnerschaft erst an. Pöppel hält die Grundausstattung in jedem Fahrzeug einsatzbereit – gewartet, geprüft, nachgefüllt. Sie kümmern sich um den Auftrag, nicht um den Werkzeugbestand.</p>
+      <p class="eyebrow">Optionaler Service</p>
+      <h2 class="h2 display">So läuft es mit System.</h2>
+      <p class="sub">Auf Wunsch hält Pöppel die Grundausstattung in jedem Fahrzeug einsatzbereit – gewartet, geprüft, nachgefüllt. Optional zubuchbar: Sie kümmern sich um den Auftrag, nicht um den Werkzeugbestand.</p>
     </div>
     <div class="auto-grid">
       <div class="auto-card">
@@ -761,6 +761,22 @@ document.getElementById('leadForm').addEventListener('submit',function(e){
   this.querySelector('.form-note').style.display='none';
   document.getElementById('formOk').style.display='block';
 });
+
+// Parallax-Timing: "Warum Trautwein" erst stoppen, wenn ihr unteres Ende den Viewport erreicht,
+// damit sie komplett durchgescrollt wird, bevor die Ablauf-Sektion darüberschiebt.
+(function(){
+  var warum = document.querySelector('.stack .warum');
+  if(!warum) return;
+  function setTop(){
+    var vh = window.innerHeight;
+    var sh = warum.offsetHeight;
+    warum.style.top = (sh > vh ? (vh - sh) : 0) + 'px';
+  }
+  setTop();
+  window.addEventListener('resize', setTop);
+  window.addEventListener('load', setTop);
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(setTop); }
+})();
 </script>
 
 </body>
