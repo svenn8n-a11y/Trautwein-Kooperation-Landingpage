@@ -72,7 +72,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 /* Section headings */
 .eyebrow{color:var(--rot);font-weight:700;font-size:.82rem;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px}
 .h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin-bottom:18px}
-.sub{font-size:1.1rem;color:#5c6268;max-width:680px}
+.sub{font-size:1.12rem;line-height:1.72;color:#5c6268;max-width:768px}
 .center{text-align:center}
 .center .sub{margin-left:auto;margin-right:auto}
 
@@ -132,15 +132,19 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .placeholder-note{margin-top:30px;font-size:.86rem;color:#8a9096;text-align:center;font-style:italic}
 
 /* Vorteile Trautwein */
-.vorteile-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:48px}
-.vorteil{text-align:center;padding:22px 14px}
-.vorteil .ic{width:52px;height:52px;margin:0 auto 14px;border-radius:12px;background:var(--rot);display:flex;align-items:center;justify-content:center}
-.vorteil .ic svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.vorteil h4{font-size:1rem;margin-bottom:6px}
-.vorteil p{font-size:.86rem;color:#5c6268}
+.vorteile-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:66px}
+.vorteil{text-align:center;padding:26px 16px}
+.vorteil .ic{width:74px;height:74px;margin:0 auto 20px;border-radius:20px;background:linear-gradient(145deg,#ffffff 0%,#ffeef0 100%);border:1px solid #f4d4d8;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(204,7,30,.10),inset 0 1px 0 #fff;transition:transform .25s ease,box-shadow .25s ease}
+.vorteil:hover .ic{transform:translateY(-4px);box-shadow:0 16px 30px rgba(204,7,30,.18)}
+.vorteil .ic svg{width:40px;height:40px}
+.vorteil .ic svg .stroke{fill:none;stroke:var(--rot);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.vorteil .ic svg .fill{fill:var(--rot)}
+.vorteil .ic svg .soft{fill:var(--rot);opacity:.16}
+.vorteil h4{font-size:1.04rem;margin-bottom:8px;letter-spacing:-.01em}
+.vorteil p{font-size:.9rem;color:#5c6268;line-height:1.5}
 
 /* Expertise / Trust-Leiste */
-.rating-badge{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:40px;padding:10px 22px 10px 16px;box-shadow:var(--shadow);margin:0 auto 8px}
+.rating-badge{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:40px;padding:10px 22px 10px 16px;box-shadow:var(--shadow);margin:12px auto 30px}
 .rating-badge .score{font-family:'Anton',sans-serif;font-size:1.5rem;color:var(--dunkel);line-height:1}
 .rating-badge .stars{color:#ffb400;font-size:1.05rem;letter-spacing:1px}
 .rating-badge .meta{font-size:.82rem;color:#5c6268;text-align:left;line-height:1.25}
@@ -159,10 +163,32 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .ablauf .h2{color:#fff}
 .ablauf .sub{color:#b8bcc0}
 .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
-.step{position:relative;padding:32px 26px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius)}
-.step .n{font-family:'Anton',sans-serif;font-size:1.1rem;width:44px;height:44px;background:var(--rot);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
-.step h3{font-size:1.2rem;margin-bottom:10px}
-.step p{color:#b8bcc0;font-size:.96rem}
+.step{position:relative;padding:34px 30px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:16px;transition:transform .28s ease,border-color .28s ease,background .28s ease}
+.step:hover{transform:translateY(-8px);border-color:rgba(255,90,102,.55);background:rgba(255,255,255,.075)}
+.step .n{font-family:'Anton',sans-serif;font-size:1.2rem;width:48px;height:48px;background:var(--rot);color:#fff;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:0 8px 20px rgba(204,7,30,.38)}
+.step h3{font-size:1.24rem;margin-bottom:11px}
+.step p{color:#b8bcc0;font-size:.98rem;line-height:1.55}
+.step.hl{border-color:var(--rot);background:rgba(204,7,30,.12)}
+.step.hl .n{background:#fff;color:var(--rot)}
+
+/* Automatik / Werkzeug-Management */
+.automatik{background:var(--hell)}
+.auto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.auto-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 28px;transition:transform .25s ease,box-shadow .25s ease}
+.auto-card:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(50,55,60,.12)}
+.auto-card .aic{width:58px;height:58px;border-radius:15px;background:linear-gradient(145deg,#ffffff 0%,#ffeef0 100%);border:1px solid #f4d4d8;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.auto-card .aic svg{width:32px;height:32px}
+.auto-card .aic svg .stroke{fill:none;stroke:var(--rot);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.auto-card .aic svg .fill{fill:var(--rot)}
+.auto-card .aic svg .soft{fill:var(--rot);opacity:.16}
+.auto-card h3{font-size:1.16rem;margin-bottom:9px}
+.auto-card p{font-size:.96rem;color:#5c6268;line-height:1.55}
+.auto-highlight{margin-top:24px;background:linear-gradient(140deg,var(--rot),#a80518);color:#fff;border-radius:18px;padding:40px 44px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:30px;box-shadow:0 18px 40px rgba(204,7,30,.28)}
+.auto-highlight .hic{width:66px;height:66px;border-radius:16px;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.auto-highlight .hic svg{width:36px;height:36px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.auto-highlight h3{font-family:'Anton',sans-serif;font-size:1.7rem;text-transform:uppercase;letter-spacing:.01em;margin-bottom:8px;color:#fff}
+.auto-highlight p{color:rgba(255,255,255,.92);font-size:1.02rem;line-height:1.5;max-width:640px}
+.auto-highlight .tag{background:#fff;color:var(--rot);font-weight:700;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding:10px 20px;border-radius:30px;white-space:nowrap}
 
 /* FAQ */
 .faq{background:#fff}
@@ -209,10 +235,14 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
 @media(max-width:900px){
   section{padding:60px 0}
   .prob-grid,.paket-grid,.step-grid{grid-template-columns:1fr}
+  .auto-highlight{grid-template-columns:1fr;text-align:center;gap:20px;padding:34px 26px}
+  .auto-highlight .hic{margin:0 auto}
+  .auto-highlight p{margin:0 auto}
   .coop-grid{grid-template-columns:1fr;gap:16px}
   .coop-plus{padding:6px 0}
   .coop-plus span{width:52px;height:52px;font-size:2rem}
   .vorteile-grid{grid-template-columns:repeat(2,1fr)}
+  .auto-grid{grid-template-columns:1fr}
   .expertise-bar{grid-template-columns:repeat(2,1fr);gap:30px 20px;padding:32px 24px}
   .exp-stat:not(:last-child)::after{display:none}
   .ablauf{border-radius:32px 32px 0 0}
@@ -376,8 +406,7 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
         </ul>
         <div class="foot">Für Fahrzeuge, die einen verlässlichen Grundstock brauchen.</div>
       </div>
-      <div class="paket mid">
-        <span class="badge">Empfohlen</span>
+      <div class="paket">
         <h3>Komfort</h3>
         <div class="who">Der einsatzfertige Standard</div>
         <ul>
@@ -386,18 +415,19 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
           <li>Mess- und Prüftechnik</li>
           <li>Ordnungssystem für die Einrichtung</li>
         </ul>
-        <div class="foot">Die häufigste Wahl – das Fahrzeug arbeitet ab Tag eins.</div>
+        <div class="foot">Solide bestückt – das Fahrzeug arbeitet ab Tag eins.</div>
       </div>
-      <div class="paket">
+      <div class="paket mid">
+        <span class="badge">Empfohlen</span>
         <h3>Voll</h3>
-        <div class="who">Komplett arbeitsfertig</div>
+        <div class="who">Komplett arbeitsfertig & betreut</div>
         <ul>
           <li>Alles aus Komfort</li>
           <li>Spezialwerkzeug nach Gewerk</li>
           <li>Ladungssicherung & Sicherheit</li>
-          <li>Nachfüll-Konzept ab Lager</li>
+          <li>Nachfüll-Konzept über das Pöppel-Bestellsystem</li>
         </ul>
-        <div class="foot">Für Flotten, die ohne Nacharbeit übergeben werden sollen.</div>
+        <div class="foot">Empfohlen: bleibt dauerhaft bestückt – gewartet, geprüft, automatisch nachgefüllt.</div>
       </div>
     </div>
     <p class="placeholder-note">Paketinhalte als Rahmen – die konkrete Bestückung wird je Gewerk und Fahrzeug im Beratungsgespräch festgelegt.</p>
@@ -420,27 +450,27 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
     </div>
     <div class="vorteile-grid">
       <div class="vorteil">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path class="soft" d="M12 2.5l7.5 3.2v5.6c0 4.7-3.1 8.4-7.5 9.7-4.4-1.3-7.5-5-7.5-9.7V5.7z"/><path class="stroke" d="M12 2.5l7.5 3.2v5.6c0 4.7-3.1 8.4-7.5 9.7-4.4-1.3-7.5-5-7.5-9.7V5.7z"/><path class="stroke" d="M8.4 12.2l2.5 2.5 4.7-5"/></svg></div>
         <h4>Verlässlich</h4>
         <p>Hält, was zugesagt wird.</p>
       </div>
       <div class="vorteil">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21l2.3-7.1-6-4.5h7.6z"/></svg></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path class="soft" d="M12 2.6a6.4 6.4 0 1 1 0 12.8 6.4 6.4 0 0 1 0-12.8z"/><path class="stroke" d="M8.7 14.4L7 21.4l5-2.7 5 2.7-1.7-7"/><circle class="stroke" cx="12" cy="9" r="6.4"/><path class="fill" d="M12 5.7l1.05 2.13 2.35.34-1.7 1.66.4 2.34L12 11.4l-2.1 1.1.4-2.33-1.7-1.66 2.35-.34z"/></svg></div>
         <h4>Höchste Qualität</h4>
         <p>Beste Materialien, Detailarbeit.</p>
       </div>
       <div class="vorteil">
-        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><circle class="soft" cx="12" cy="12" r="9"/><circle class="stroke" cx="12" cy="12" r="9"/><path class="stroke" d="M12 7v5l3.4 2"/><path class="fill" d="M12 3.2a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8z"/></svg></div>
         <h4>Termintreue</h4>
         <p>Pünktlich und zuverlässig.</p>
       </div>
       <div class="vorteil">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21v-4l11-11 4 4L7 21z"/><path d="M14 6l4 4"/></svg></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path class="soft" d="M12 6.6L16.8 19h-3.1L12 13.6 10.3 19H7.2z"/><circle class="stroke" cx="12" cy="4.6" r="2.1"/><path class="stroke" d="M11 6.4L6.6 19M13 6.4L17.4 19"/><path class="stroke" d="M9.5 14.5h5"/></svg></div>
         <h4>Flexibel</h4>
         <p>Sonderanfertigung nach Muster.</p>
       </div>
       <div class="vorteil">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path class="soft" d="M3.5 6.5A2.5 2.5 0 0 1 6 4h8.5A2.5 2.5 0 0 1 17 6.5V11a2.5 2.5 0 0 1-2.5 2.5H8l-4.5 3.3z"/><path class="stroke" d="M3.5 6.5A2.5 2.5 0 0 1 6 4h8.5A2.5 2.5 0 0 1 17 6.5V11a2.5 2.5 0 0 1-2.5 2.5H8l-4.5 3.3z"/><path class="stroke" d="M20.5 9.5A2.5 2.5 0 0 1 21 11v4.5a2.5 2.5 0 0 1-2.5 2.5v2.8L14 17.5"/><circle class="fill" cx="7.3" cy="8.7" r="1"/><circle class="fill" cx="10.3" cy="8.7" r="1"/><circle class="fill" cx="13.3" cy="8.7" r="1"/></svg></div>
         <h4>Direkter Kontakt</h4>
         <p>Persönlich, nah dran.</p>
       </div>
@@ -473,7 +503,7 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
         <h3>Grundpaket wählen</h3>
         <p>Pöppel stimmt das Werkzeug-Grundpaket auf die Einrichtung ab – Basis, Komfort oder Voll.</p>
       </div>
-      <div class="step">
+      <div class="step hl">
         <div class="n display">03</div>
         <h3>Einsatzbereit übergeben</h3>
         <p>Fahrzeug plus bestückte Einrichtung. Der Monteur steigt ein und fängt an.</p>
@@ -482,6 +512,57 @@ footer .logo-f img{height:30px;margin-bottom:16px;filter:brightness(0) invert(1)
   </div>
 </section>
 </div><!-- /stack -->
+
+<!-- AUTOMATIK / WERKZEUG-MANAGEMENT -->
+<section class="automatik" id="management">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Nach der Übergabe</p>
+      <h2 class="h2 display">So läuft es automatisch</h2>
+      <p class="sub">Mit der Übergabe fängt die Partnerschaft erst an. Pöppel hält die Grundausstattung in jedem Fahrzeug einsatzbereit – gewartet, geprüft, nachgefüllt. Sie kümmern sich um den Auftrag, nicht um den Werkzeugbestand.</p>
+    </div>
+    <div class="auto-grid">
+      <div class="auto-card">
+        <div class="aic"><svg viewBox="0 0 24 24"><circle class="soft" cx="12" cy="12" r="3.4"/><path class="stroke" d="M12 8.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8z"/><path class="stroke" d="M12 2.5v2.4M12 19.1v2.4M21.5 12h-2.4M4.9 12H2.5M18.7 5.3l-1.7 1.7M7 17l-1.7 1.7M18.7 18.7 17 17M7 7 5.3 5.3"/></svg></div>
+        <h3>Maschinen warten & bestücken</h3>
+        <p>Akku-Geräte und Werkzeug bleiben einsatzbereit – regelmäßig geprüft und wieder aufgefüllt.</p>
+      </div>
+      <div class="auto-card">
+        <div class="aic"><svg viewBox="0 0 24 24"><path class="soft" d="M2.5 6.5h10v9h-10z"/><path class="stroke" d="M2.5 6.5h10v9h-10z"/><path class="stroke" d="M12.5 9.5H17l3 3v3h-7.5z"/><circle class="stroke" cx="6.5" cy="17.5" r="1.8"/><circle class="stroke" cx="16.5" cy="17.5" r="1.8"/></svg></div>
+        <h3>Werkzeug nachliefern</h3>
+        <p>Verschleiß und Verbrauch – nachgeliefert aus fast 500.000 Artikeln mit 98 % Lieferbereitschaft ab Lager.</p>
+      </div>
+      <div class="auto-card">
+        <div class="aic"><svg viewBox="0 0 24 24"><path class="soft" d="M6 3.5h9l3.5 3.5v13.5H6z"/><path class="stroke" d="M6 3.5h9l3.5 3.5v13.5H6z"/><path class="stroke" d="M14.5 3.5V7h4M8.8 12.5l1.8 1.8 3.6-3.8"/></svg></div>
+        <h3>DGUV-Prüfungen</h3>
+        <p>Elektrische Betriebsmittel gesetzeskonform geprüft und dokumentiert – die Verantwortung liegt bei uns.</p>
+      </div>
+      <div class="auto-card">
+        <div class="aic"><svg viewBox="0 0 24 24"><path class="soft" d="M2.5 9.5h11v6h-11z"/><path class="stroke" d="M2.5 9.5h11v6h-11z"/><path class="stroke" d="M13.5 11.5H17l3.5 3v1h-7z"/><path class="fill" d="M18.5 4.5a2.5 2.5 0 0 1 2.5 2.5c0 1.7-2.5 4-2.5 4S16 8.7 16 7a2.5 2.5 0 0 1 2.5-2.5z"/><circle class="soft" cx="18.5" cy="7" r=".9"/></svg></div>
+        <h3>Jeder Wagen ist erfasst</h3>
+        <p>Fahrzeug für Fahrzeug digital hinterlegt – wir wissen, was in welchem Wagen verbaut und verstaut ist.</p>
+      </div>
+      <div class="auto-card">
+        <div class="aic"><svg viewBox="0 0 24 24"><path class="soft" d="M4 13h4v7H4zM10 8h4v12h-4zM16 4h4v16h-4z"/><path class="stroke" d="M4 13h4v7H4zM10 8h4v12h-4zM16 4h4v16h-4z"/></svg></div>
+        <h3>Bestände im Blick</h3>
+        <p>Die Bestände jedes Fahrzeugs sind erfasst – transparent, jederzeit abrufbar, ohne manuelle Zählung.</p>
+      </div>
+      <div class="auto-card">
+        <div class="aic"><svg viewBox="0 0 24 24"><path class="soft" d="M13 3.5l1.8 3.9 4.2.5-3.1 2.9.9 4.2L13 12.8 9.2 15l.9-4.2L7 7.9l4.2-.5z"/><path class="stroke" d="M14.5 4.2a2 2 0 1 1 2.9 2.7l-8.2 8.6-3.6 1 .8-3.7z"/><path class="stroke" d="M13.5 5.8 16 8.3"/></svg></div>
+        <h3>Reparaturservice</h3>
+        <p>Defektes Gerät? Der Pöppel-Reparaturservice bringt Maschinen zurück in den Einsatz – statt teurem Neukauf.</p>
+      </div>
+    </div>
+    <div class="auto-highlight">
+      <div class="hic"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 4v4h-4"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <div>
+        <h3>Automatisch nachbestellt</h3>
+        <p>Auf Wunsch koppeln wir die Bestände direkt an das Pöppel-Bestellsystem: leert sich ein Wagen, wird automatisiert nachbestellt. Ein Shop, ein System – und Ihre Flotte bleibt ohne Nachdenken bestückt.</p>
+      </div>
+      <span class="tag">Pöppel Bestellsystem</span>
+    </div>
+  </div>
+</section>
 
 <!-- FAQ -->
 <section class="faq" id="faq">
